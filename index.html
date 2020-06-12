@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <style>
+            #logo {
+                display: block;
+                position: absolute;
+                margin: 0px 0px 0px 133px;
+                left: -139px;
+                padding: 0px 28px 0px 30px;
+                top: 15px;
+            }
+            #searchbar {
+                background-color: rgb (255, 255, 255);
+                border-color: rgb(223, 225, 229);
+                border-radius: 24px;
+                border-style: solid;
+                border-width: 1px;
+                display: inline-block;
+                font-family: arial, sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                color: rgba(0, 0, 0, 0.87);
+                height: 44px;
+                min-width: 400px;
+                vertical-align: center;
+                padding: 0px 10px 0px 14px;
+                margin-top: -2px;
+                margin-left: 145px;
+            }
+            #apps {
+                background-image: url("images/background.png");
+                background-position: -132px -38px;
+                background-size: 528px 68px;
+                width: 30px;
+                height: 30px;
+                border-radius: 2px;
+                box-sizing: border-box; 
+                display: inline-block;
+                opacity: 0.55;
+                vertical-align: middle;
+            }
+            #signin {
+                background-clip: border-box;
+                background-color: rgb(26, 115, 232);
+                background-origin: padding-box;
+                background-size: auto;
+                border-color: rgba(0, 0, 0, 0);
+                border-radius: 4px;
+                border-style: solid;
+                border-width: 1px;
+                box-sizing: border-box;
+                color: rgb(255, 255, 255);
+                cursor: pointer;
+                display: inline-block;
+                font-family: Google Sans, Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: 0.25px;
+                line-height: 16px;
+                margin: 0px 8px 0px 8px;
+                min-width: 96px;
+                padding: 9px 23px 9px 23px;
+                text-align: center;
+                vertical-align: middle;
+                text-decoration: none;
+            }
+            #top_nav {
+                min-width: 832px;
+                height: 16px;
+                color: rgb(102, 102, 102);
+                font-size: 13px;
+                font-family: arial, sans-serif;
+                margin-left: 139px;
+                margin-top: 6px;
+                margin-bottom: -71px;
+                width: 16px;
+                line-height: 16px;
+            }
+            #all {
+                display: inline-block;
+                color: rgb(26, 115, 232);
+                padding: 16px 12px 12px 10px;
+                border-bottom-color: rgb(26, 115, 232);
+                border-bottom-width: 3px;
+                border-bottom-style: solid;
+            }
+            #news {
+                display: inline-block;
+                padding: 16px 12px 12px 10px;
+            }
+            #videos {
+                display: inline-block;
+                padding: 16px 12px 12px 10px;
+            }
+            #maps {
+                display: inline-block;
+                padding: 16px 12px 12px 10px;
+            }
+            #shopping {
+                display: inline-block;
+                padding: 16px 12px 12px 10px;
+            }
+            #more {
+                display: inline-block;
+                padding: 16px 12px 12px 10px;
+            }
+            #settings {
+                display: inline-block;
+                padding: 16px 12px 12px 36px;
+            }
+            #tools {
+                display: inline-block;
+                padding: 16px 12px 12px 10px;
+            }
+            #appbar {
+                border-bottom-color: rgb(223, 225, 229);
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                padding: 0px 0px 0px 0px;
+                height: 102px;
+            }
+            #result-stats {
+                height: 43px;
+                margin-left: 145px;
+                color: rgb(112, 117, 122);
+                font-family: arial, sans-serif;
+                font-size: 14px;
+                padding: 14px 8px 0px 0px;
+            }
+            #featured {
+                border-color: rgb(223, 225, 229);
+                border-width: 1px;
+                border-style: solid;
+                border-radius: 8px;
+                line-height: 22px;
+                font-size: 16px;
+                font-family: arial, sans-serif;
+                position: relative;
+                text-align: left;
+                margin: -10px -52px 24px 145px;
+                padding: 4px 24px 0px 8px;
+                width: 600px;
+            }
+            #feature_citation {
+                color: rgb(32, 33, 36);
+                display: block;
+                font-size: 14px;
+                font-weight: 400;
+                font-family: arial, sans-serif;
+                line-height: 20.5px;
+                padding-top: 2px;
+                padding-bottom: 1px;
+                text-align: left;
+            }
+            #cite {
+                font-style: normal;
+            }
+            #citation_remains {
+                color: rgb(95, 99, 104);
+            }
+            #featured_address {
+                color: rgb(26, 13, 171);
+                display: inline-block;
+                font-family: arial, sans-serif;
+                font-size: 20px;
+                line-height: 26px;
+                margin: 0px 0px 0px 0px;
+                padding: 4px 0px 0px 0px;
+                text-decoration: none;
+            }
+            #featured_title {
+                font-weight: 400;
+            }
+            #feature_help {
+                margin: -20px 18px -4px 520px;
+                padding: 0px 16px 0px 8px;
+            }
+            #about_features {
+                color: rgb(112, 117, 122);
+                font-size: 12px;
+                font-family: arial, sans-serif;
+                text-align: left;
+                line-height: 16px;
+                text-decoration: none;
+                padding-right: 20px;
+            }
+            #feature_feedback {
+                color: rgb(112, 117, 122);
+                font-size: 12px;
+                font-family: arial, sans-serif;
+                text-align: left;
+                line-height: 16px;
+                text-decoration: none;
+                padding-right: 15px;
+            }
+            .result {
+                margin: 0px 60px 0px 145px;
+            }
+            .result_cite {
+                font-family: arial, sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 18.2px;
+                text-align: left;
+                padding-top: 20px;
+                display: block;
+            }
+            .result_cite1 {
+                color: rgb(32, 33, 36);
+                font-style: normal;
+            }
+            .result_cite2 {
+                color: rgb(95, 99, 104);
+            }
+            .result_link_words {
+                color: rgb(26, 13, 171);
+                display: inline-block;
+                font-family: arial, sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                line-height: 26px;
+                height: 26px;
+                font-weight: 400;
+                margin: 0px 0px 0px 0px;
+                padding: 4px 0px 0px 0px;
+            }
+            h3 {
+                font-style: normal;
+                font-family: arial, sans-serif;
+            }
+            .result_words {
+                color: rgb(77, 81, 86);
+                font-family: arial, sans-serif;
+                font-size: 14px;
+                line-height: 22px;
+                margin-top: 3px;
+                overflow-wrap: break-word;
+            }
+            #related_search {
+                display: block;
+                margin-bottom: 28px;
+                margin-left: 145px;
+            }
+            #related_search_title {
+                color: rgb(34, 34, 34);
+                font-family: arial, sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                height: 26px;
+                line-height: 26px;
+            }
+            .related_cols {
+                box-sizing: border-box;
+                display: inline-block;
+                font-family: arial, sans-serif;
+                font-size: 14px;
+                line-height: 20px;
+                max-width: 100%;
+            }
+            .related_col_1 {
+                color: rgb(26, 13, 171);
+                display: block;
+                padding: 3px 32px 3px 0px;
+                text-decoration-line: none;
+            }
+            .related_col_2 {
+                color: rgb(26, 13, 171);
+                display: block;
+                padding: 3px 32px 3px 0px;
+                text-decoration-line: none;
+            }
+            #page_table {
+                border-collapse: collapse;
+                color:rgb(34, 34, 34);
+                font-family: arial, sans-serif;
+                font-size: 14px;
+                margin: 30px 171px 30px 171px;
+                text-align: left;
+            }
+            #g_logo {
+                font-weight: 700;
+                text-align: center;
+                background-clip: border-box;
+                background-image: url("images/google_logo.webp");
+                background-origin: padding-box;
+                background-position: -24px 0px;
+                background-size: auto;
+                display: block;
+                border-collapse: collapse;
+                height: 40px;
+                width: 28px;
+            }
+            #o_1 {
+                text-decoration-line: none;
+            }
+            #o_1_logo {
+                background-clip: border-box;
+                background-image: url("images/google_logo.webp");
+                background-origin: padding-box;
+                background-position: -53px 0px;
+                background-size: auto;
+                display: block;
+                height: 40px;
+                width: 20px;
+            }
+            #o_1_num {
+                color: rgb(34, 34, 34);
+                text-align: center;
+                font-weight: 400;
+                position: absolute;
+                margin: 0px 0px 0px 5px;
+            }
+            .o_2 {
+                text-decoration-line: none;
+            }
+            .o_2_logo {
+                background-clip: border-box;
+                background-image: url("images/google_logo.webp");
+                background-origin: padding-box;
+                background-position: -74px 0px;
+                background-size: auto;
+                display: block;
+                height: 40px;
+                width: 20px;
+                color: rgb(66, 133, 244);
+            }
+            .o_2_num {
+                color: rgb(66, 133, 244);
+                text-align: center;
+                font-weight: 400;
+                position: absolute;
+                margin: 0px 0px 0px 5px;
+            }
+            #gle_logo {
+                background-clip: border-box;
+                background-image: url("images/google_logo.webp");
+                background-origin: padding-box;
+                background-position: -96px 0px;
+                background-size: auto;
+                display: block;
+                height: 40px;
+                width: 71px;
+                color: rgb(66, 133, 244);
+            }
+            #gle_num {
+                color: rgb(66, 133, 244);
+                text-align: center;
+                font-weight: 400;
+                position: absolute;
+                margin: 0px 0px 0px 51px;
+            }
+            #double_foot {
+                display: block;
+                height: 82px;
+                position: relative;
+                background-clip: border-box;
+                background-color: rgb(242, 242, 242);
+                background-origin: padding-box;
+                border-bottom-color: rgb(228, 228, 228);
+                border-bottom-style: solid;
+                border-bottom-width: 1px;
+                line-height: 40px;
+                min-width: 1173px;
+                margin-left: -27px;
+            }
+            #top_foot {
+                border-bottom-color: rgb(228, 228, 228);
+                border-bottom-style: solid;
+                border-bottom-width: 1px;
+                line-height: 40px;
+            }
+            #south_africa {
+                color: rgba(0, 0, 0, 0.54);
+                font-family: arial, sans-serif;
+                font-size: 15px;
+                line-height: 40px;
+                margin-left: 175px;
+            }
+            #foot_location {
+                border-left-color: rgb(228, 228, 228);
+                border-left-style: solid;
+                border-left-width: 1px;
+                color: rgb(95, 99, 104);
+                display: inline-block;
+                font-family: arial, sans-serif;
+                font-size: 14px;
+                line-height: 15px;
+                margin-left: 13px;
+                padding-left: 16px;
+            }
+            #foot_dot {
+                background-color: rgb(158, 158, 158);
+                background-origin: padding-box;
+                background-clip: border-box;
+                background-size: auto;
+                display: inline-block;
+                border-radius: 100%;
+                height: 10px;
+                width: 10px;
+                margin: 6px 4px 9px 0px;
+                vertical-align: middle;
+            }
+            #foot_postcode {
+                color: rgb(51, 51, 51);
+                font-weight: 700;
+            }
+            #foot_precise_loc {
+                text-decoration-line: none;
+                color: rgb(95, 99, 104);
+            }
+            #foot_learn_more {
+                text-decoration-line: none;
+                color: rgb(95, 99, 104);
+            }
+            #bottom_foot {
+                line-height: 40px;
+                margin-left: 147px;
+            }
+            #foot_help {
+                color: rgb(95, 99, 104);
+                font-family: arial, sans-serif;
+                font-size: 14px;
+                text-decoration-line: none;
+                padding-left: 27px;
+            }
+            #foot_feedback {
+                color: rgb(95, 99, 104);
+                font-family: arial, sans-serif;
+                font-size: 14px;
+                text-decoration-line: none;
+                padding-left: 27px;
+            }
+            #foot_privacy {
+                color: rgb(95, 99, 104);
+                font-family: arial, sans-serif;
+                font-size: 14px;
+                text-decoration-line: none;
+                padding-left: 27px;
+            }
+            #foot_terms {
+                color: rgb(95, 99, 104);
+                font-family: arial, sans-serif;
+                font-size: 14px;
+                text-decoration-line: none;
+                padding-left: 27px;
+            }
+        </style>
+        <nav id="navbar">
+            <img src="images/sml_logo.png" alt="Google" id="logo" width="92" height="30">
+            <input maxlength="2048" id="searchbar" type="text" value="build this webpage">
+            <a href="https://about.google/intl/en/products/?tab=wh" id="apps" target="_blank"></a>
+            <a href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/" id="signin" target="_blank">Sign in</a>
+        </nav>
+        <div id="top_nav">
+            <div id="all">All</div>
+            <div id="news">News</div>
+            <div id="videos">Videos</div>
+            <div id="maps">Maps</div>
+            <div id="shopping">Shopping</div>
+            <div id="more">More</div>
+            <div id="settings">Settings</div>
+            <div id="tools">Tools</div>
+        </div>
+        <div id="appbar"></div>
+        <div id="result-stats">
+            About 95 200 000 000 results (0,49 seconds)
+        </div>
+        <div id="featured">
+            <span id="featured_words">
+                TO CREATE A <b>WEBSITE</b> WITH WORDPRESS (OR JOOMLA & DRUPAL), USE ONE CLICK INSTALLATION: Log in to your hosting account. Go to your control panel. Look for the "Wordpress" or "<b>Website</b>" icon. Choose the domain where you want to install your <b>website</b>.
+            </span>
+            <div id="feature_citation">
+                <cite id="cite">victor-lf.github.io</cite>
+                <span id="citation_remains">› google-search-results</span>
+            </div>
+            <div>
+                <a id="featured_address" href="https://victor-lf.github.io/google-search-results/">
+                    <h3 id="featured_title">build this webpage - GitHub Pages</h3>
+                </a>
+            </div>
+        </div>
+        <div id="feature_help">
+            <a id="about_features" href="https://www.google.com/url?url=https://support.google.com/websearch?p%3Dfeatured_snippets%26hl%3Den-ZA&rct=j&q=&esrc=s&usg=AOvVaw0DVV7ZIOQDrSSmml8Ox6DT&hl=en-ZA&sa=X&ved=2ahUKEwjy3IPWu_TpAhVJi1wKHZTkB9QQrpwBegQICxAN">About Featured Snippets</a>
+            <a id="feature_feedback" href="https://www.google.com/search?q=build+this+webpage#">Feedback</a>
+        </div>
+        <div class="result" id="result_1">
+            <div class="result_cite">
+                <cite class="result_cite1">christine-27.github.io</cite>
+                <span class="result_cite2">› google-homepage</span>
+            </div>
+            <div>
+                <a class="result_link" href="https://christine-27.github.io/google-homepage/">
+                    <h3 class="result_link_words">build this webpage - GitHub Pages</h3>
+                </a>
+                <p class="result_words">
+                    With zero coding experience, artist <b>building</b> 180 <b>webpages</b> in 180 days. hhttps://arstechnica.com/.../with-zero-coding-experience-artist-<b>building</b>-180-<b>webpages</b>-.
+                </p>    
+            </div>
+        </div>
+        <div class="result" id="result_2">
+            <div class="result_cite">
+                <cite class="result_cite1">arstechnica.com</cite>
+                <span class="result_cite2">› information-technology › 2013/07</span>
+            </div>
+            <div>
+                <a class="result_link" href="https://arstechnica.com/information-technology/2013/07/with-zero-coding-experience-artist-building-180-webpages-in-180-days/">
+                    <h3 class="result_link_words">With zero coding experience, artist building 180 webpages in ...</h3>
+                </a>
+                <p class="result_words">
+                    Jul 26, 2013 - One of Jennifer Dewalt's creations, this <b>webpage</b> lets visitors create paintings in ... <b>Build</b> a different <b>website</b> every day for 180 consecutive days.
+                </p>    
+            </div>
+        </div>
+        <div class="result" id="result_3">
+            <div class="result_cite">
+                <cite class="result_cite1">www.websitebuilderexpert.com</cite>
+                <span class="result_cite2">› building-websites</span>
+            </div>
+            <div>
+                <a class="result_link" href="https://www.websitebuilderexpert.com/building-websites/">
+                    <h3 class="result_link_words">How to Build a Website 2020 | The Complete Beginner's Guide</h3>
+                </a>
+                <p class="result_words">
+                    4 days ago - How to <b>Build</b> a <b>Website</b>: the Step-by-Step Guide to Easy Setup. We'll look at how to make a <b>website</b> with both a <b>website</b> builder and Wordpress, ...
+                </p>    
+            </div>
+        </div>
+        <div class="result" id="result_4">
+            <div class="result_cite">
+                <cite class="result_cite1">www.buildthis.io</cite>
+                <span class="result_cite2">› make-a-website</span>
+            </div>
+            <div>
+                <a class="result_link" href="https://www.buildthis.io/make-a-website/">
+                    <h3 class="result_link_words">How to Build a Website: A-to-Z Beginner Guide - BuildThis.io</h3>
+                </a>
+                <p class="result_words">
+                    Apr 21, 2020 - In this article, I will show you the essential steps in <b>creating</b> a <b>website</b>. Register a domain name; Signup for a web hosting; Design your ...
+                </p>    
+            </div>
+        </div>
+        <div class="result" id="result_5">
+            <div class="result_cite">
+                <cite class="result_cite1">www.google.com</cite>
+                <span class="result_cite2">› business › website-builder</span>
+            </div>
+            <div>
+                <a class="result_link" href="https://www.google.com/business/website-builder/">
+                    <h3 class="result_link_words">Free Website Builder For Your Business - Google My Business</h3>
+                </a>
+                <p class="result_words">
+                    Let Google <b>build</b> your first <b>website</b> for free. We'll help you create a beautiful <b>website</b> to impress and engage new customers - and establish your business online.
+                </p>    
+            </div>
+        </div>
+        <div class="result" id="result_6">
+            <div class="result_cite">
+                <cite class="result_cite1">www.google.com</cite>
+                <span class="result_cite2">› intl › en_za › website-builder</span>
+            </div>
+            <div>
+                <a class="result_link" href="https://www.google.com/intl/en_za/business/website-builder/">
+                    <h3 class="result_link_words">Free Website Builder For Your Business - Google My Business</h3>
+                </a>
+                <p class="result_words">
+                    May 1, 2020 - Let Google <b>build</b> your first <b>website</b> for free. We'll help you create a beautiful <b>website</b> to impress and engage new customers - and establish ...
+                </p>    
+            </div>
+        </div>
+        <div class="result" id="result_7">
+            <div class="result_cite">
+                <cite class="result_cite1">www.website.com</cite>
+                <span class="result_cite2"></span>
+            </div>
+            <div>
+                <a class="result_link" href="https://www.website.com/">
+                    <h3 class="result_link_words">Create Your Website for Free | Free Site Builder | Website.com</h3>
+                </a>
+                <p class="result_words">
+                    Domain names, web hosting, <b>website</b> templates, and ecommerce solutions ... <b>Build</b> a credible brand identity with your custom domain name - included for free ...
+                </p>    
+            </div>
+        </div>
+        <div class="result" id="result_8">
+            <div class="result_cite">
+                <cite class="result_cite1">www.pcmag.com</cite>
+                <span class="result_cite2">› ... › Web Hosting</span>
+            </div>
+            <div>
+                <a class="result_link" href="https://www.website.com/">
+                    <h3 class="result_link_words">How to Create a Website | PCMag</h3>
+                </a>
+                <p class="result_words">
+                    If you need to quickly <b>build</b> a simple <b>website</b>, starting with a blogging service is a great way to go. The major player in the blog game is WordPress, a content ...
+                </p>    
+            </div>
+        </div>
+        <div id="related_search">
+            <h3 id="related_search_title">Searches related to build this webpage</h3>
+            <div id="related_col_a" class="related_cols">
+                <a href="/search?q=website&amp;sa=X&amp;ved=2ahUKEwjy3IPWu_TpAhVJi1wKHZTkB9QQ1QIoAHoECAoQAQ" id="related1.1" class="related_col_1"><b>website</b></a>
+                <a href="/search?q=create+professional+website&amp;sa=X&amp;ved=2ahUKEwjy3IPWu_TpAhVJi1wKHZTkB9QQ1QIoAXoECAoQAg" id="related1.2" class="related_col_1"><b>create professional website</b></a>
+                <a href="/search?q=build+a+website+free&amp;sa=X&amp;ved=2ahUKEwjy3IPWu_TpAhVJi1wKHZTkB9QQ1QIoAnoECAoQAw" id="related1.3" class="related_col_1">build <b>a website free</b></a>
+                <a href="/search?q=how+to+build+a+website+from+scratch&amp;sa=X&amp;ved=2ahUKEwjy3IPWu_TpAhVJi1wKHZTkB9QQ1QIoA3oECAoQBA" id="related1.4" class="related_col_1"><b>how to</b> build <b>a website from scratch</b></a>
+            </div>
+            <div id="related_col_b" class="related_cols">
+                <a href="/search?q=the+odin+project&amp;sa=X&amp;ved=2ahUKEwjy3IPWu_TpAhVJi1wKHZTkB9QQ1QIoBHoECAoQBQ" id="related2.1" class="related_col_2"><b>the odin project</b></a>
+                <a href="/search?q=github&amp;sa=X&amp;ved=2ahUKEwjy3IPWu_TpAhVJi1wKHZTkB9QQ1QIoBXoECAoQBg" id="related2.2" class="related_col_2"><b>github</b></a>
+                <a href="/search?q=how+to+create+a+website+free+of+cost&amp;sa=X&amp;ved=2ahUKEwjy3IPWu_TpAhVJi1wKHZTkB9QQ1QIoBnoECAoQBw" id="related2.3" class="related_col_2"><b>how to create a website free of cost</b></a>
+                <a href="/search?q=how+to+build+a+website+for+someone+else&amp;sa=X&amp;ved=2ahUKEwjy3IPWu_TpAhVJi1wKHZTkB9QQ1QIoB3oECAoQCA" id="related2.4" class="related_col_2"><b>how to</b> build <b>a website for someone else</b></a>
+            </div>
+        </div>
+        <div id="foot">
+            <table id="page_table">
+                <td><span id="g_logo"></span></td>
+                <td>
+                    <a href="" id="o_1">
+                        <span id="o_1_logo"></span>
+                        <p id="o_1_num">1</p>
+                    </a>
+                </td>
+                <td>
+                    <a href="" class="o_2">
+                        <span id="o_2_1_logo" class="o_2_logo"></span>
+                        <p id="o_2_1_num" class="o_2_num">2</p>
+                    </a>
+                </td>
+                <td>
+                    <a href="" class="o_2">
+                        <span id="o_2_2_logo" class="o_2_logo"></span>
+                        <p id="o_2_2_num" class="o_2_num">3</p>
+                    </a>
+                </td>
+                <td>
+                    <a href="" class="o_2">
+                        <span id="o_2_3_logo" class="o_2_logo"></span>
+                        <p id="o_2_3_num" class="o_2_num">4</p>
+                    </a>
+                </td>
+                <td>
+                    <a href="" class="o_2">
+                        <span id="o_2_4_logo" class="o_2_logo"></span>
+                        <p id="o_2_4_num" class="o_2_num">5</p>
+                    </a>
+                </td>
+                <td>
+                    <a href="" class="o_2">
+                        <span id="o_2_5_logo" class="o_2_logo"></span>
+                        <p id="o_2_5_num" class="o_2_num">6</p>
+                    </a>
+                </td>
+                <td>
+                    <a href="" class="o_2">
+                        <span id="o_2_6_logo" class="o_2_logo"></span>
+                        <p id="o_2_6_num" class="o_2_num">7</p>
+                    </a>
+                </td>
+                <td>
+                    <a href="" class="o_2">
+                        <span id="o_2_7_logo" class="o_2_logo"></span>
+                        <p id="o_2_7_num" class="o_2_num">8</p>
+                    </a>
+                </td>
+                <td>
+                    <a href="" class="o_2">
+                        <span id="o_2_8_logo" class="o_2_logo"></span>
+                        <p id="o_2_8_num" class="o_2_num">9</p>
+                    </a>
+                </td>
+                <td>
+                    <a href="" class="o_2">
+                        <span id="o_2_9_logo" class="o_2_logo"></span>
+                        <p id="o_2_9_num" class="o_2_num">10</p>
+                    </a>
+                </td>
+                <td>
+                    <a href="">
+                        <span id="gle_logo"></span>
+                        <span id="gle_num">Next</span>
+                    </a>
+                </td>
+            </table>
+        </div>
+        <div id="double_foot">
+            <div id="top_foot">
+                <span id="south_africa">South Africa</span>
+                <div id="foot_location">
+                    <span id="foot_dot"></span>
+                    <span id="foot_postcode">2092, Johannesburg</span>
+                    <span class="foot_loc_dash">-</span>
+                    <span id="foot_IP">From your Internet address</span>
+                    <span class="foot_loc_dash">-</span>
+                    <a href="" id="foot_precise_loc">Use precise location</a>
+                    <span class="foot_loc_dash">-</span>
+                    <a href="" id="foot_learn_more">Learn more</a>
+                </div>
+            </div>
+            <div id="bottom_foot">
+                <span>
+                    <a href="" id="foot_help">Help</a>
+                    <a href="" id="foot_feedback">Send feedback</a>
+                    <a href="" id="foot_privacy">Privacy</a>
+                    <a href="" id="foot_terms">Terms</a>
+                </span>
+            </div>
+        </div>
+    </body>
+</html>
